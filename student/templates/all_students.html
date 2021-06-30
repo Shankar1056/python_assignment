@@ -9,7 +9,7 @@
 <body>
 
 
-    {% for user in users %}
+    {% for user in Students %}
 
         name: {{user.name}}
         email: {{user.email}}<br><br>
@@ -27,8 +27,12 @@
     {% endif %}
 
 
+<form method="get", action="/delete">
+        <div class="container">
+            <button type="submit">Delete All Users</button>
 
-
-
+        </div>
+    </form>
+<a href="/">Logout</a>
 </body>
 </html>

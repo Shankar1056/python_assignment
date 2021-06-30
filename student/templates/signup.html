@@ -7,6 +7,18 @@
 </head>
 <body>
     <center> <h1> Student SignUp Form </h1> </center>
+
+    <br><br>
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for cat, msg in messages %}
+    <div class="{{cat}}">{{ msg }}</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<br><br>
+
+
     <form method="post" action="">
         <div class="container">
             <label>Username : </label>
